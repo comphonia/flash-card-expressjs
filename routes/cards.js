@@ -23,13 +23,13 @@ router.get('/:id',(req,res)=>{
     if(side === 'question'){
         templateData.hint = hint
         templateData.sideToShow = 'answer'
-        templateData.sideToShowDisplay = 'Answer'
+        res.render('front',templateData)
     } else if (side === 'answer'){
         templateData.sideToShow = 'question'
-        templateData.sideToShowDisplay = 'Questions'
+        res.render('back',templateData)
     } else {return res.redirect(`/cards`) }
 
-    res.render('card',templateData)
+    
 })
 
 module.exports = router

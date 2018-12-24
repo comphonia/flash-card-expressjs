@@ -1,10 +1,13 @@
 {
-  "name": "ExpressApp",
+  "name": "express-app",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines":{
+    "node":"10.12.0"
   },
   "keywords": [],
   "author": "",

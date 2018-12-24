@@ -8,6 +8,7 @@ const app = express()
 
 const mainRoutes = require('./routes/main')
 const cardRoutes = require('./routes/cards')
+var port = process.env.PORT || 3000
 
 // turn off parsers extended options
 app.use(bodyParser.urlencoded({extended: false}))
@@ -41,4 +42,4 @@ app.use((err,req,res,next)=>{
     res.render('error')
 })
 //setup a dev server
-app.listen(3000,()=>console.log("Server is running on port 3000 "))
+app.listen(port,()=>console.log("Server is running on port 3000 "))
